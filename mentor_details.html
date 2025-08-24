@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MentorConnect - Mentor Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9fafd;
+      color: #222;
+    }
+    nav {
+      background: #004080;
+      padding: 12px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #004080;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    section {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    img {
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    input[type="text"] {
+      display: block;
+      width: 300px;
+      max-width: 90%;
+      margin: 0 auto 20px auto;
+      padding: 8px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    a.button-link {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.button-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="mentor_details.html">Mentor Directory</a>
+    <a href="mentee_directory.html">Mentee Directory</a>
+  </nav>
+  <main>
+    <h1>Mentor Directory</h1>
+    <input type="text" id="search" placeholder="Search by name or domain..." aria-label="Search Mentors" />
+
+    <table id="mentorTable" aria-describedby="mentor-description">
+      <caption id="mentor-description">List of mentors with their domain, experience, availability, and rating</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Domain</th>
+          <th>Experience</th>
+          <th>Availability</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Subham Singh </td>
+          <td>DSA</td>
+          <td>6 years</td>
+          <td>Available</td>
+          <td>★★★★★</td>
+        </tr>
+        <tr>
+          <td>rishi Thakur</td>
+          <td>Data Science</td>
+          <td>4.5 years</td>
+          <td>Booked</td>
+          <td>★★★★☆</td>
+        </tr>
+        <tr>
+          <td>Aryan Deep</td>
+          <td>Full Stack</td>
+          <td>5 years</td>
+          <td>Available</td>
+          <td>★★★★☆</td>
+        </tr>
+        <tr>
+          <td>Meenal Rai</td>
+          <td>Cybersecurity</td>
+          <td>7 years</td>
+          <td>Available</td>
+          <td>★★★★★</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section aria-label="Featured Mentor">
+      <h2>Featured Mentor: Rajeev Sen</h2>
+      <img src="https://via.placeholder.com/130" alt="Rajeev Sen" width="130" height="130" />
+      <p>
+        Rajeev specializes in <strong>DSA</strong> with over 6 years of experience. He has
+        guided 120+ students to master algorithms and coding interviews.<br />
+        <em>"Helping each student find their problem-solving voice."</em>
+      </p>
+    </section>
+
+    <nav style="text-align:center; margin-top: 2rem;">
+      <a href="mentee_directory.html" class="button-link">See Current Mentees &rarr;</a>
+    </nav>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const table = document.getElementById('mentorTable');
+    const rows = table.tBodies[0].rows;
+
+    searchInput.addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      for (let row of rows) {
+        const name = row.cells[0].textContent.toLowerCase();
+        const domain = row.cells[1].textContent.toLowerCase();
+        // Show row if name or domain matches filter
+        if (name.includes(filter) || domain.includes(filter)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

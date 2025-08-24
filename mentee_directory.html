@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MentorConnect - Mentee Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9fafd;
+      color: #222;
+    }
+    nav {
+      background: #004080;
+      padding: 12px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: #004080;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    section {
+      margin-top: 2rem;
+      background: #e0f0ff;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    img {
+      float: left;
+      margin-right: 15px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+    nav.bottom-nav {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    a.button-link {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      margin: 0 auto;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.button-link:hover {
+      background-color: #0056b3;
+    }
+    @media(max-width: 600px) {
+      img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="mentor_details.html">Mentor Directory</a>
+    <a href="mentee_directory.html">Mentee Directory</a>
+  </nav>
+  <main>
+    <h1>Mentee Directory</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Learning Domain</th>
+          <th>Progress Stage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tanya Sharma</td>
+          <td>Data Science</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Ravi Kumar</td>
+          <td>Full Stack</td>
+          <td>Beginner</td>
+        </tr>
+        <tr>
+          <td>Sneha Joshi</td>
+          <td>DSA</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>Arjun Verma</td>
+          <td>Cybersecurity</td>
+          <td>Beginner</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section>
+      <img src="https://via.placeholder.com/120" alt="Mentee group photo" />
+      <h2>The Role of Mentees</h2>
+      <p>
+        Mentees are passionate learners—whether beginners or advancing in their domain.
+        Regular mentor support helps them build skills, confidence, and career direction.
+        Our structured program guides mentees from foundational topics to real-world problem solving.
+      </p>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="mentor_details.html" class="button-link">&larr; Back to Mentor Directory</a>
+    </nav>
+  </main>
+</body>
+</html>
